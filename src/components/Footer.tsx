@@ -1,30 +1,31 @@
+import styles from '../styles/Footer.module.css'
+
 const navLinks = ['Quienes Somos', 'Sectores', 'Innovacion', 'Proyectos', 'Alianzas', 'Noticias', 'Contacto']
 
 export default function Footer() {
   return (
-    <footer className="bg-verde-dark text-white">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+
+        <div className={styles.grid}>
 
           {/* Brand */}
           <div>
-            <p className="font-display text-xl font-bold mb-1">FEDERACION COLOMBIANA</p>
-            <p className="text-verde-mid text-sm tracking-widest uppercase mb-4">de Agricultores</p>
-            <p className="text-white/60 text-sm font-body leading-relaxed">
+            <p className={styles.brandName}>FEDERACION COLOMBIANA</p>
+            <p className={styles.brandSub}>de Agricultores</p>
+            <p className={styles.brandDesc}>
               Impulsamos el desarrollo rural sostenible integrando agricultura, ambiente
               y turismo rural para fortalecer las comunidades del campo colombiano.
             </p>
           </div>
 
-          {/* Links */}
+          {/* Nav links */}
           <div>
-            <p className="font-body font-semibold text-sm uppercase tracking-wider mb-4 text-white/80">
-              Navegacion
-            </p>
-            <ul className="space-y-2">
+            <p className={styles.colTitle}>Navegacion</p>
+            <ul className={styles.navList}>
               {navLinks.map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-white/60 text-sm font-body hover:text-verde-mid transition-colors">{link}</a>
+                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className={styles.navLink}>{link}</a>
                 </li>
               ))}
             </ul>
@@ -32,29 +33,28 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="font-body font-semibold text-sm uppercase tracking-wider mb-4 text-white/80">
-              Contacto
-            </p>
-            <ul className="space-y-3 text-white/60 text-sm font-body">
+            <p className={styles.colTitle}>Contacto</p>
+            <ul className={styles.contactList}>
               <li>Colombia</li>
               <li>info@federacioncolombianadeagricultura.co</li>
               <li className="pt-4">
-                <p className="text-white/80 text-xs mb-2 uppercase tracking-wider">Slogan</p>
-                <p className="text-verde-mid font-display italic text-base">Progreso y desarrollo integral</p>
+                <p className={styles.sloganLabel}>Slogan</p>
+                <p className={styles.slogan}>Progreso y desarrollo integral</p>
               </li>
             </ul>
           </div>
 
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs font-body">
+        <div className={styles.bottom}>
+          <p className={styles.bottomText}>
             &copy; 2025 Federacion Colombiana de Agricultura. Todos los derechos reservados.
           </p>
-          <p className="text-white/40 text-xs font-body">
+          <p className={styles.bottomText}>
             Legalmente constituida ante la Camara de Comercio de Colombia
           </p>
         </div>
+
       </div>
     </footer>
   )

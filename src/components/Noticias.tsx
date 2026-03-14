@@ -1,9 +1,11 @@
+import styles from '../styles/Noticias.module.css'
+
 const noticias = [
   {
     categoria: 'Proyectos',
-    titulo: 'Avances en el fortalecimiento de cadenas productivas de café en el Huila',
+    titulo: 'Avances en el fortalecimiento de cadenas productivas de cafe en el Huila',
     fecha: 'Marzo 2025',
-    descripcion: 'La federación acompaña a productores rurales en la mejora de sus procesos productivos y acceso a mercados.',
+    descripcion: 'La federacion acompana a productores rurales en la mejora de sus procesos productivos y acceso a mercados.',
   },
   {
     categoria: 'Eventos',
@@ -15,50 +17,38 @@ const noticias = [
     categoria: 'Convocatorias',
     titulo: 'Convocatoria abierta para proyectos de turismo rural comunitario',
     fecha: 'Enero 2025',
-    descripcion: 'La federación abre convocatoria para comunidades interesadas en desarrollar proyectos de turismo rural.',
+    descripcion: 'La federacion abre convocatoria para comunidades interesadas en desarrollar proyectos de turismo rural.',
   },
 ]
 
 export default function Noticias() {
   return (
-    <section id="noticias" className="py-24 bg-crema">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-verde-mid text-sm tracking-widest uppercase text-center mb-3 font-body">
-          Últimas novedades
-        </p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center text-verde-dark mb-4">
-          Noticias
-        </h2>
-        <p className="text-gray-500 text-center max-w-xl mx-auto mb-16 font-body">
-          Avances, actividades, convocatorias y eventos de la Federación Colombiana de Agricultura.
+    <section id="noticias" className={styles.section}>
+      <div className={styles.container}>
+
+        <p className={styles.tagline}>Ultimas novedades</p>
+        <h2 className={styles.title}>Noticias</h2>
+        <p className={styles.subtitle}>
+          Avances, actividades, convocatorias y eventos de la Federacion Colombiana de Agricultura.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {noticias.map(n => (
-            <article
-              key={n.titulo}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group"
-            >
-              {/* Color bar */}
-              <div className="h-2 bg-gradient-to-r from-verde-dark to-verde-mid" />
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-verde-light text-verde-dark text-xs px-3 py-1 rounded-full font-body">
-                    {n.categoria}
-                  </span>
-                  <span className="text-gray-400 text-xs font-body">{n.fecha}</span>
+        <div className={styles.grid}>
+          {noticias.map((n) => (
+            <article key={n.titulo} className={styles.card}>
+              <div className={styles.cardBar} />
+              <div className={styles.cardBody}>
+                <div className={styles.cardMeta}>
+                  <span className={styles.cardCategoria}>{n.categoria}</span>
+                  <span className={styles.cardFecha}>{n.fecha}</span>
                 </div>
-                <h3 className="font-display text-lg font-bold text-verde-dark mb-3 leading-snug group-hover:text-verde-mid transition-colors">
-                  {n.titulo}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed font-body">{n.descripcion}</p>
-                <button className="mt-6 text-verde-mid text-sm font-body font-medium hover:text-verde-dark transition-colors">
-                  Leer más →
-                </button>
+                <h3 className={styles.cardTitle}>{n.titulo}</h3>
+                <p className={styles.cardDesc}>{n.descripcion}</p>
+                <button className={styles.cardBtn}>Leer mas</button>
               </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   )

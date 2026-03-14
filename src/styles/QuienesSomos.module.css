@@ -1,0 +1,140 @@
+.section {
+  padding: 6rem 0;
+  background: #FAFAF7;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Text side */
+.tagline {
+  color: #0CA81B;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #005932;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.body {
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #005932;
+  font-weight: 700;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0CA81B;
+}
+
+.statLabel {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.cta {
+  display: inline-block;
+  background: #005932;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #0CA81B;
+}
+
+/* Visual card side */
+.cardWrapper {
+  position: relative;
+}
+
+.visionCard {
+  background: linear-gradient(to bottom right, #005932, #0CA81B);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  color: white;
+}
+
+.visionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.visionText {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.decorBottom {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 6rem;
+  height: 6rem;
+  background: #E8F5E9;
+  border-radius: 9999px;
+  z-index: -1;
+}
+
+.decorTop {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(12, 168, 27, 0.2);
+  border-radius: 9999px;
+  z-index: -1;
+}

@@ -1,0 +1,140 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #005932, #0a7a20, #0CA81B);
+}
+
+.circleTopRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-25%) translateX(25%);
+}
+
+.circleBottomLeft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(25%) translateX(-25%);
+}
+
+.circleCenter {
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 56rem;
+  padding: 8rem 1.5rem;
+}
+
+.tagline {
+  color: #0CA81B;
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 42rem;
+  margin: 0 auto 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btnPrimary {
+  background: white;
+  color: #005932;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btnPrimary:hover {
+  background: #0CA81B;
+  color: white;
+}
+
+.btnOutline {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btnOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btnGreen {
+  background: #0CA81B;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btnGreen:hover {
+  background: #005932;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import styles from '../styles/Navbar.module.css'
 
 type NavLink = {
   label: string
@@ -17,12 +18,10 @@ const links: NavLink[] = [
 
 function DesktopNav() {
   return (
-    <ul className="hidden md:flex gap-8 text-sm font-medium">
+    <ul className={styles.desktopList}>
       {links.map((l) => (
         <li key={l.label}>
-          <a href={l.href} className="hover:text-verde-mid transition-colors duration-200">
-            {l.label}
-          </a>
+          <a href={l.href} className={styles.desktopLink}>{l.label}</a>
         </li>
       ))}
     </ul>
@@ -35,10 +34,10 @@ type MobileNavProps = {
 
 function MobileNav({ onClose }: MobileNavProps) {
   return (
-    <ul className="md:hidden bg-verde-dark border-t border-white/10 px-6 pb-6 pt-2 flex flex-col gap-4 text-sm">
+    <ul className={styles.mobileList}>
       {links.map((l) => (
         <li key={l.label}>
-          <a href={l.href} onClick={onClose} className="hover:text-verde-mid transition-colors duration-200 block py-1">{l.label}</a>
+          <a href={l.href} onClick={onClose} className={styles.mobileLink}>{l.label}</a>
         </li>
       ))}
     </ul>
@@ -52,22 +51,18 @@ export default function Navbar() {
   const handleClose = () => setOpen(false)
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-verde-dark text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className={styles.nav}>
+      <div className={styles.container}>
 
-        <div className="flex flex-col leading-tight">
-          <span className="font-display text-base md:text-lg font-bold tracking-wide">
-            FEDERACION COLOMBIANA
-          </span>
-          <span className="text-verde-mid text-xs tracking-widest uppercase">
-            de Agricultores
-          </span>
+        <div className={styles.brand}>
+          <span className={styles.brandName}>FEDERACION COLOMBIANA</span>
+          <span className={styles.brandSub}>de Agricultores</span>
         </div>
 
         <DesktopNav />
 
         <button
-          className="md:hidden focus:outline-none"
+          className={styles.menuButton}
           onClick={open ? handleClose : handleOpen}
           aria-label="Toggle menu"
         >
@@ -77,7 +72,6 @@ export default function Navbar() {
       </div>
 
       {open && <MobileNav onClose={handleClose} />}
-
     </nav>
   )
 }

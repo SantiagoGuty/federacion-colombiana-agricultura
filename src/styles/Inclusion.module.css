@@ -1,0 +1,99 @@
+.section {
+  padding: 6rem 0;
+  background: #005932;
+  color: white;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem;
+}
+
+.tagline {
+  color: #0CA81B;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+}
+
+/* Cards */
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  min-width: 200px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+/* Quote */
+.quote {
+  margin-top: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    padding: 3rem;
+  }
+}
+
+.quoteText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.quoteAuthor {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
