@@ -48,7 +48,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p className={styles.bottomText}>
-            &copy; 2025 Federacion Colombiana de Agricultura. Todos los derechos reservados.
+            &copy; 2026 Federacion Colombiana de Agricultura. Todos los derechos reservados.
           </p>
           <p className={styles.bottomText}>
             Legalmente constituida ante la Camara de Comercio de Colombia

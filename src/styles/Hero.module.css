@@ -138,3 +138,10 @@
   left: 0;
   right: 0;
 }
+
+.section {
+  padding: 6rem 0;
+  background: #FAFAF7;
+  border: none;
+  outline: none;
+}
