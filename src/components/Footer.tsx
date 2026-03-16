@@ -1,4 +1,6 @@
 import styles from '../styles/Footer.module.css'
+import logo from '../assets/logo_federacion_agricultura_hd.png'
+
 
 const navLinks = [
   { label: 'Quienes Somos', href: '#quienes' },
@@ -21,7 +23,7 @@ export default function Footer() {
           <div className={styles.left}>
             <a href="#hero" className={styles.logoCircle}>
               <img
-                src="/src/assets/logo_federacion_agricultura_hd.png"
+                src={logo}
                 alt="Federacion Colombiana de Agricultura"
                 className={styles.logo}
               />

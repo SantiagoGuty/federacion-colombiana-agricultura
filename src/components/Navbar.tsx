@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../styles/Navbar.module.css'
+import logo from '../assets/logo_federacion_agricultura_hd.png'
+
 
 type NavLink = {
   label: string
@@ -47,7 +49,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         <a href="#hero" className={styles.logoWrapper}>
           <img
-            src="/src/assets/logo_federacion_agricultura_hd.png"
+            src={logo}
             alt="Federacion Colombiana de Agricultura"
             className={styles.logo}
           />
