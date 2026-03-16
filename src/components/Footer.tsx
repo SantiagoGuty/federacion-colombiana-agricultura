@@ -1,47 +1,67 @@
 import styles from '../styles/Footer.module.css'
 
-const navLinks = ['Quienes Somos', 'Sectores', 'Innovacion', 'Proyectos', 'Alianzas', 'Noticias', 'Contacto']
+const navLinks = [
+  { label: 'Quienes Somos', href: '#quienes' },
+  { label: 'Sectores', href: '#sectores' },
+  { label: 'Innovacion', href: '#innovacion' },
+  { label: 'Proyectos', href: '#proyectos' },
+  { label: 'Alianzas', href: '#alianzas' },
+  { label: 'Noticias', href: '#noticias' },
+  { label: 'Contacto', href: '#contacto' },
+]
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
 
-        <div className={styles.grid}>
+        <div className={styles.main}>
 
-          {/* Brand */}
-          <div>
-            <p className={styles.brandName}>FEDERACION COLOMBIANA</p>
-            <p className={styles.brandSub}>de Agricultores</p>
-            <p className={styles.brandDesc}>
-              Impulsamos el desarrollo rural sostenible integrando agricultura, ambiente
-              y turismo rural para fortalecer las comunidades del campo colombiano.
-            </p>
+          {/* LEFT — logo circle */}
+          <div className={styles.left}>
+            <a href="#hero" className={styles.logoCircle}>
+              <img
+                src="/src/assets/logo_federacion_agricultura_hd.png"
+                alt="Federacion Colombiana de Agricultura"
+                className={styles.logo}
+              />
+            </a>
           </div>
 
-          {/* Nav links */}
-          <div>
-            <p className={styles.colTitle}>Navegacion</p>
-            <ul className={styles.navList}>
-              {navLinks.map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className={styles.navLink}>{link}</a>
+          {/* RIGHT — nav + contact */}
+          <div className={styles.right}>
+
+            <div className={styles.col}>
+              <p className={styles.colTitle}>Navegacion</p>
+              <ul className={styles.navList}>
+                {navLinks.map((l) => (
+                  <li key={l.label}>
+                    <a href={l.href} className={styles.navLink}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className={styles.col}>
+              <p className={styles.colTitle}>Contacto</p>
+              <ul className={styles.contactList}>
+                <li>
+                  <span className={styles.contactLabel}>Pais</span>
+                  <span>Colombia</span>
                 </li>
-              ))}
-            </ul>
-          </div>
+                <li>
+                  <span className={styles.contactLabel}>Correo</span>
+                  <a href="mailto:info@federacioncolombianadeagricultura.co" className={styles.contactEmail}>
+                    info@federacioncolombianadeagricultura.co
+                  </a>
+                </li>
+                <li>
+                  <span className={styles.contactLabel}>Slogan</span>
+                  <span className={styles.slogan}>Progreso y desarrollo integral</span>
+                </li>
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div>
-            <p className={styles.colTitle}>Contacto</p>
-            <ul className={styles.contactList}>
-              <li>Colombia</li>
-              <li>info@federacioncolombianadeagricultura.co</li>
-              <li className="pt-4">
-                <p className={styles.sloganLabel}>Slogan</p>
-                <p className={styles.slogan}>Progreso y desarrollo integral</p>
-              </li>
-            </ul>
           </div>
 
         </div>

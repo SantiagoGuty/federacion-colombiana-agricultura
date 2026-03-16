@@ -162,6 +162,8 @@
   height: 167px;
   width: auto;
   transition: transform 0.3s ease;
+  transform: translateY(18px); /* adjust this value + or - until centered */
+
 }
 
 @media (max-width: 767px) {
