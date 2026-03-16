@@ -18,13 +18,20 @@ export default function QuienesSomos() {
             <h2 className={styles.title}>Quienes Somos</h2>
             <p className={styles.body}>
               La Federacion Colombiana de Agricultura es una organizacion de caracter nacional
-              conformada por <strong className={styles.highlight}>9 asociaciones cofundadoras</strong>,
-              que trabajan de manera articulada para promover el desarrollo rural sostenible.
+              que articula <strong className={styles.highlight}>afiliados, organizaciones y
+              procesos rurales</strong> comprometidos con el desarrollo sostenible del campo
+              colombiano.
             </p>
             <p className={styles.body}>
-              La federacion impulsa iniciativas que fortalecen las comunidades rurales,
-              promueven el cuidado del medio ambiente y generan nuevas oportunidades
-              economicas para los territorios.
+              La federacion surge de la iniciativa de diferentes actores del sector rural que
+              decidieron trabajar de manera articulada para impulsar proyectos que fortalezcan
+              las comunidades y promuevan nuevas oportunidades para los territorios.
+            </p>
+            <p className={styles.body}>
+              La organizacion se encuentra legalmente constituida e inscrita ante la{' '}
+              <strong className={styles.highlight}>Camara de Comercio</strong>, lo que respalda
+              su funcionamiento institucional y su capacidad para desarrollar proyectos y
+              establecer alianzas.
             </p>
 
             <div className={styles.stats}>
@@ -44,15 +51,15 @@ export default function QuienesSomos() {
             <div className={styles.visionCard}>
               <h3 className={styles.visionTitle}>Nuestra Vision</h3>
               <p className={styles.visionText}>
-                Contribuir a un modelo de desarrollo rural donde la agricultura, el cuidado
-                del medio ambiente y el turismo rural se conviertan en pilares de crecimiento
-                economico y social para los territorios.
+                Contribuir a un modelo de desarrollo rural donde agricultura, sostenibilidad
+                ambiental y turismo rural se conviertan en pilares de crecimiento economico,
+                social y ambiental para los territorios.
               </p>
               <h3 className={styles.visionTitle}>Nuestra Mision</h3>
               <p className={styles.visionText}>
-                Promover el desarrollo rural sostenible mediante el fortalecimiento de las
-                asociaciones rurales, la implementacion de proyectos productivos y la
-                proteccion de los recursos naturales.
+                Promover el desarrollo rural sostenible mediante el fortalecimiento de
+                afiliados, organizaciones y procesos rurales, y la implementacion de proyectos
+                en los sectores de agricultura, ambiente y turismo rural.
               </p>
             </div>
             <div className={styles.decorBottom} />

@@ -20,8 +20,8 @@ export default function Hero() {
           Desarrollo rural sostenible que integra agricultura, ambiente y turismo rural.
         </p>
         <p className={styles.description}>
-          Organizacion nacional conformada por 9 asociaciones rurales que impulsan proyectos
-          productivos, sostenibles e innovadores para fortalecer el campo colombiano.
+          Organizacion nacional que articula afiliados, organizaciones y procesos rurales
+          comprometidos con el desarrollo sostenible del campo colombiano.
         </p>
         <div className={styles.buttons}>
           <a href="#quienes" className={styles.btnPrimary}>Conocer la Federacion</a>
