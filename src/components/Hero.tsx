@@ -14,7 +14,7 @@ export default function Hero() {
           Progreso y desarrollo integral
         </p>
         <h1 className={styles.title}>
-          Federacion Colombiana<br />de Agricultura
+          Federación Colombiana<br />de Agricultura
         </h1>
         <p className={styles.subtitle}>
           Desarrollo rural sostenible que integra agricultura, ambiente y turismo rural.
