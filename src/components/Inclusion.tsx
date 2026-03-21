@@ -34,7 +34,7 @@ export default function Inclusion() {
 
         <div className={styles.quote}>
           <p className={styles.quoteText}>
-            El campo colombiano avanza cuando incluye a todos
+            "El campo colombiano avanza cuando incluye a todos"
           </p>
           <p className={styles.quoteAuthor}>Federacion Colombiana de Agricultura</p>
         </div>

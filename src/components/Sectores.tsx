@@ -5,7 +5,7 @@ interface Sector {
   title: string
   description: string
   tags: string[]
-  gradient: string
+  image: string
 }
 
 const sectores: Sector[] = [
@@ -14,21 +14,21 @@ const sectores: Sector[] = [
     title: 'Agricultura',
     description: 'Produccion agricola, cadenas productivas, agroindustria e innovacion para los productores rurales.',
     tags: ['Cafe', 'Cacao', 'Frutas', 'Agroindustria', 'Agricultura sostenible'],
-    gradient: 'linear-gradient(to bottom right, #005932, #0CA81B)',
+    image: '/images/ganado.jpeg',
   },
   {
     icon: '🌿',
     title: 'Ambiente',
     description: 'Proteccion de recursos naturales, reforestacion, conservacion de ecosistemas y educacion ambiental.',
     tags: ['Restauracion ambiental', 'Proteccion del agua', 'Proyectos climaticos'],
-    gradient: 'linear-gradient(to bottom right, #1A6B9A, #0CA81B)',
+    image: '/images/pajaro_rojo.jpeg',
   },
   {
     icon: '🏡',
     title: 'Turismo Rural',
     description: 'Turismo comunitario y experiencias rurales que generan ingresos y muestran la riqueza territorial.',
     tags: ['Agroturismo', 'Rutas productivas', 'Ecoturismo', 'Turismo cultural'],
-    gradient: 'linear-gradient(to bottom right, #8B5E3C, #005932)',
+    image: '/images/vacas_en_campo.jpeg',
   },
 ]
 
@@ -47,7 +47,14 @@ export default function Sectores() {
         <div className={styles.grid}>
           {sectores.map((s) => (
             <div key={s.title} className={styles.card}>
-              <div className={styles.cardTop} style={{ background: s.gradient }}>
+              <div
+                className={styles.cardTop}
+                style={{
+                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55)), url(${s.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
                 <div className={styles.cardIcon}>{s.icon}</div>
                 <h3 className={styles.cardTitle}>{s.title}</h3>
                 <p className={styles.cardDesc}>{s.description}</p>

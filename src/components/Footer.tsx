@@ -1,5 +1,5 @@
 import styles from '../styles/Footer.module.css'
-import logo from '../assets/logo_federacion_agricultura_hd.png'
+import logo from '../../public/images/logo_federacion_agricultura_hd.png'
 
 
 const navLinks = [
